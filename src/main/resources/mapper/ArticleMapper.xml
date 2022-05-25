@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skyline.crawler.mapper.ArticleDao">
+
+
+
+    <insert id="save" parameterType="com.skyline.crawler.domain.Article" useGeneratedKeys="true" keyProperty="id">
+        insert into article (title,content,url,category)
+        values (#{title},#{content},#{url},#{category})
+    </insert>
+
+
+
+</mapper>

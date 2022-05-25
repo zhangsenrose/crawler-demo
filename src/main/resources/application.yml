@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?characterEncoding=utf8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    jdbc-type-for-null: 'null'
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
