@@ -23,7 +23,7 @@ public class ArticleCrawler extends WebCrawler {
     private static final Pattern IMAGE_EXTENSIONS = Pattern.compile(".*\\.(bmp|gif|jpg|png)$");
 
 
-    private ArticleService articleService = (ArticleService) SpringUtil.getBean("articleService");
+
 
 
     @Override
@@ -41,16 +41,20 @@ public class ArticleCrawler extends WebCrawler {
 
         String url = page.getWebURL().getURL();
 
-        if(page.getParseData() instanceof HtmlParseData){
+        System.out.println(url);
+
+        /*if(page.getParseData() instanceof HtmlParseData){
 
             Article article = getArticleByParseDoc(url, "育儿");
 
             if (ObjectUtils.isNotEmpty(article.getTitle()) &&
                     ObjectUtils.isNotEmpty(article.getTitle()) && ObjectUtils.isNotEmpty(article.getContent())) {
 
+                ArticleService articleService;articleService = (ArticleService) SpringUtil.getBean("articleService");
+
                 articleService.save(article);
             }
-        }
+        }*/
     }
 
 

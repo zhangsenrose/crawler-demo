@@ -11,6 +11,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Article {
 
+    private Integer id;
+
     private String title;
 
     private String content;
